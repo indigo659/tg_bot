@@ -1,3 +1,4 @@
+import requests
 from telegram import Update
 from telegram.ext import Application, MessageHandler, ContextTypes, filters
 
@@ -9,6 +10,10 @@ USER_IDS = [937816408, 1182551708]# thomas 937816408 #indigo 1182551708
 
 # TARGET_CHAT_ID is the id of the chat where you want to forward these messages
 TARGET_CHAT_ID = -1002085260355 #thomas forwarding channel
+
+message = "Activated!"
+url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={TARGET_CHAT_ID}&text={message}"
+requests.get(url).json()
 
 async def filter_and_forward(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Check if the message is from one of the users you're monitoring
