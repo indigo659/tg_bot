@@ -3,7 +3,7 @@ from telegram import Update
 from telegram.ext import Application, MessageHandler, ContextTypes, filters
 
 # Use your Bot Token here
-TOKEN = '1953339762:AAHBpdwL9YIExZCY1A1uxY_zoZf5H2acqes' #1953339762:AAHBpdwL9YIExZCY1A1uxY_zoZf5H2acqes
+TOKEN = ''
 
 # List of USER_IDs of the users whose messages you want to forward
 USER_IDS = [937816408, 1182551708]# thomas 937816408 #indigo 1182551708
